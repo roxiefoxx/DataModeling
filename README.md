@@ -142,10 +142,7 @@ To set up and run the ETL pipeline and database:
 
 1. Clone this repository to your local machine.
 
-2. Install the required dependencies by running:
-   ```
-   pip install -r requirements.txt
-   ```
+2. Install the required dependencies (see above).
 
 3. Create a PostgreSQL database for Sparkify. Modify the database connection settings in the `create_tables.py` and `etl.py` scripts to match your database configuration.
 
@@ -154,5 +151,3 @@ To set up and run the ETL pipeline and database:
    - `etl.py`: This script will execute the ETL process to populate the tables with data.
 
 5. With the database populated, you can run analytical queries to extract insights from the Sparkify data.
-
-## Conclusion
