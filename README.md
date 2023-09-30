@@ -26,20 +26,26 @@ The purpose of the project is to facilitate song play analysis for Sparkify. By 
 With this database, Sparkify can gain valuable insights into user behavior and preferences, which can inform decisions related to content recommendation, user engagement, and business strategy.
 
 ## Requirements
-This project was completed on a MacBook Pro running Ventura v13.5.1, using Visual Studio Code. 
+This project was completed on a MacBook Pro running Ventura v13.5.1, originally written Visual Studio Code, but completed in Jupyter from Anaconda. 
 
 While other environments will be different and have separate results, these were the conditions used in this project:
 - Python v3.9.12
 - Postgres.app v2.6.7
+- Anaconda Navigator 2.5.0
+- conda 23.7.4
 
-This specific module will need to be installed to use the provided scripts
+Specific modules will need to be installed, which I had issues installing and running from Visual Code and Homebrew on MacOS.
 
 ```
 pip install psycopg2-binary
 pip install libpq
 ```
 
-According to this [Stackoverflow](https://stackoverflow.com/questions/61054203/cant-install-libpq-dev), Anaconda's distribution of Python to bypass the libpq problem.
+According to this [Stackoverflow](https://stackoverflow.com/questions/61054203/cant-install-libpq-dev), Anaconda's distribution of Python to bypass the libpq problem using these commands:
+
+```
+conda install psycopg2
+```
 
 ## The Files
 The project files from Udacity can be downloaded from [project-template.zip](https://video.udacity-data.com/topher/2020/December/5fcdb6f5_project-template/project-template.zip). It will contain:
@@ -79,6 +85,8 @@ data/log_data/2018/11/2018-11-01-events.json
 ## Database Schema Design
 
 The database schema is designed with the star schema to efficiently store and query data related to songs, artists, users, and song plays. It consists of the following tables:
+
+![MySchema](https://github.com/roxiefoxx/DataModeling/blob/main/star_schema.png?raw=true)
 
 ### Fact Table 
 
